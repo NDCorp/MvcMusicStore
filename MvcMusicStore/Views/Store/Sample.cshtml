@@ -1,0 +1,20 @@
+﻿//Sample.cshtml
+@{
+    Layout = null;  // skip the default layout (master page)
+}
+<!DOCTYPE html>
+ <!--tell browser this is using HTML5-->
+
+<html>
+<head>
+    <title>Sample View</title>
+</head>
+<body>
+    <h1>@ViewBag.Message</h1> <!--pick a value from ViewBag-->
+    <p>
+        This is a sample view that doesn't use the standard site
+        layout.  It's not much, but you can see a controller field
+        passed in the above heading
+    </p>
+</body>
+</html>

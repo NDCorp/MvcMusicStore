@@ -1,0 +1,28 @@
+﻿//List.cshtml
+@*
+    @using MvcMusicStoreCore.Models;
+    @{
+        ViewBag.Title = "List";
+    }
+    <h2>Albums List:</h2>
+    <ul>
+        @foreach (var item in (ViewBag.Albums as IEnumerable<Album>))
+        {
+            <li>@item.Title</li>
+        }
+    </ul>
+*@
+
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+
+@model IEnumerable<MvcMusicStoreCore.Models.Album>
+@{
+    ViewBag.Title = "List";
+}
+<h2>Albums List:</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Title</li>
+    }
+</ul>

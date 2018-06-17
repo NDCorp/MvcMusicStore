@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Album>
+
+<h2>Search Results</h2>
+
+<h3>@ViewData["albumNbr"] found</h3>
+
+<table>
+
+    <tr>
+        <th>Artist</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Artist.Name</td>
+            <td>@item.Title</td>
+            @*Format the price to 2 decimal*@ 
+            <td>@item.Price.ToString("c2")</td>
+        </tr>
+
+    }
+
+</table>

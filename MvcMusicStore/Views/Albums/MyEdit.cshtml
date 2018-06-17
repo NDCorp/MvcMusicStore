@@ -1,0 +1,29 @@
+﻿@model MvcMusicStore.Models.Album
+
+<form asp-controller="Albums" asp-action="MyEdit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger">
+
+    </div>
+    <input type="hidden" asp-for="AlbumId" />
+    <input type="hidden" asp-for="ArtistId" />
+
+    <p>
+        <label asp-for="GenreId" class="col-md-2"></label>
+        <select asp-for="GenreId" asp-items="ViewBag.GenreId"></select>
+        <span asp-validation-for="GenreId" class="text-danger"></span>
+    </p>
+
+    <p>
+        <label asp-for="Title" class="col-md-2"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="GenreId" class="text-danger"></span>
+    </p>
+
+    <p>
+        <label asp-for="Price" class="col-md-2"></label>
+        <input asp-for="Price" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </p>
+
+    <button type="submit" name="Save" value="Save">Save</button>
+</form>
